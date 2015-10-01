@@ -883,6 +883,9 @@ th {
 .glyphicon-tree-deciduous:before {
   content: "\e200";
 }
+.glyphicon-menu-hamburger:before {
+  content:"\e236"
+}
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;

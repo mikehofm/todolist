@@ -4,19 +4,91 @@
    Author's custom styles
    ========================================================================== */
 
+.todolist .glyphicon-menu-hamburger {
+    font-size: 12px;
+    margin-right: 6px;
+    color: #ccc;
+}
 
+.todolist input[type=checkbox] {
+    vertical-align: top;
+}
 
+.todolist .list-group-item {
+    padding-left: 6px;
+}
 
+.todolist .add-task-form+li {
+    border-top: 0;
+}
 
+.todolist .add-task-form input[type=text] {
+    border-top-left-radius: 4px !important;
+}
 
+.todolist .add-task-form .btn {
+    border-bottom-right-radius: 0;
+}
 
+.color-block {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+}
 
+.red .color-block {
+    background-color: red;
+}
+.blue .color-block {
+    background-color: blue;
+}
+.green .color-block {
+    background-color: green;
+}
+.yellow .color-block {
+    background-color: yellow;
+}
+.black .color-block {
+    background-color: black;
+}
+.pink .color-block {
+    background-color: pink;
+}
+.white .color-block {
+    background-color: white;
+}
+.gold .color-block {
+    background-color: #EFD444;
+}
+.silver .color-block {
+    background-color: silver;
+}
+.gray .color-block {
+    background-color: gray;
+}
 
-
-
-
-
-
-
-
-
+.todolist .red.list-group-item {
+    background-color: hsl(0, 100%, 92%);
+}
+.todolist .blue.list-group-item {
+    background-color: hsl(216, 100%, 96%);
+}
+.todolist .green.list-group-item {
+    background-color: hsl(120, 100%, 96%);
+}
+.todolist .yellow.list-group-item {
+    background-color: hsl(60, 100%, 92%);
+}
+.todolist .pink.list-group-item {
+    background-color: hsl(0, 100%, 96%);
+}
+.todolist .gold.list-group-item {
+    background-color: hsl(45, 100%, 90%);
+}
+.todolist .silver.list-group-item {
+    background-color: hsl(0, 0%, 96%);
+}
+.todolist .gray.list-group-item {
+    background-color: hsl(0, 0%, 90%);
+}
