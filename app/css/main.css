@@ -4,91 +4,201 @@
    Author's custom styles
    ========================================================================== */
 
-.todolist .glyphicon-menu-hamburger {
-    font-size: 12px;
-    margin-right: 6px;
-    color: #ccc;
+.task-deleted {
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 240px;
+	z-index: 1040;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	top: -55px;
+	transition: top 0.2s;
 }
 
-.todolist input[type=checkbox] {
-    vertical-align: top;
+.glyphicon.undo {
+	-webkit-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+.todolist .glyphicon-menu-hamburger {
+	font-size: 12px;
+	margin-right: 6px;
+	margin-left: 2px;
+	color: #ccc;
 }
 
 .todolist .list-group-item {
-    padding-left: 6px;
+	padding-left: 6px;
+	transition: background-color 0.2s;
+}
+
+.todolist .list-group-item > * {
+    margin-left: 8px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .todolist .add-task-form+li {
-    border-top: 0;
+	border-top: 0;
 }
 
 .todolist .add-task-form input[type=text] {
-    border-top-left-radius: 4px !important;
+	border-top-left-radius: 4px !important;
 }
 
 .todolist .add-task-form .btn {
-    border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.todolist .task-text {
+    display: inline-block;
+    width: calc(100% - 160px);
+	transition: color 0.2s;
+}
+
+.todolist textarea {
+	width: calc(100% - 160px);
 }
 
 .color-block {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: 1px solid gray;
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border: 1px solid gray;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-bottom: -2px;
 }
 
-.red .color-block {
-    background-color: red;
+.color-description .color-block {
+	cursor: auto;
 }
-.blue .color-block {
-    background-color: blue;
+
+.color-panel h4 {
+	margin-top: 15px;
+	margin-bottom: 0px;	
+	display: inline-block;
 }
-.green .color-block {
-    background-color: green;
+
+.color-panel .close-panel {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 200px;
 }
-.yellow .color-block {
-    background-color: yellow;
+
+.color-panel .color-cell .color-block {
+	width: 20px;
+	height: 20px;
+	transition: width 0.2s, height 0.2s;
+	transition: width 0.2s, height 0.2s, margin 0.2s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	background-image: none;
 }
-.black .color-block {
-    background-color: black;
+
+.color-panel .color-cell .color-block.selected {
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	margin-left: -5px;
 }
-.pink .color-block {
-    background-color: pink;
+
+.color-panel .color-cell {
+	display: inline-block;
+	width: 8.8%;
+	position: relative;
+	height: 70px;
 }
-.white .color-block {
-    background-color: white;
+
+.color-description blockquote {
+	font-size: inherit;
+	margin-bottom: 0;
 }
-.gold .color-block {
-    background-color: #EFD444;
+
+.example {
+	font-weight: bold;
+	color: #999;
+}
+
+.none .color-block {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.15), rgba(0,0,0,0.15) 2px, transparent 2px, transparent 4px);
+}
+
+.none.none.color-block {
+	background-color: rgba(255, 255, 255, 0.5);
+	background-image: repeating-linear-gradient(45deg, rgba(0,0,0,.15), rgba(0,0,0,0.15) 5px, transparent 5px, transparent 10px);
+}
+
+.red .color-block, .red.red.color-block {
+	background-color: red;
+}
+.blue .color-block, .blue.blue.color-block {
+	background-color: blue;
+}
+.green .color-block, .green.green.color-block {
+	background-color: green;
+}
+.yellow .color-block, .yellow.yellow.color-block {
+	background-color: yellow;
+}
+.black .color-block, .black.black.color-block {
+	background-color: black;
+}
+.pink .color-block, .pink.pink.color-block {
+	background-color: pink;
+}
+.white .color-block, .white.white.color-block {
+	background-color: white;
+}
+.gold .color-block, .gold.gold.color-block {
+	background-color: #EFD444;
 }
 .silver .color-block {
-    background-color: silver;
+	background-color: silver;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, white 7px, transparent 9px);
 }
-.gray .color-block {
-    background-color: gray;
+.silver.silver.color-block {
+	background-color: silver;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, white 15px, transparent 20px);
+}
+.grey .color-block, .grey.grey.color-block {
+	background-color: gray;
+}
+
+.todolist .white .task-text, .todolist .white blockquote {
+	color: whitesmoke;
 }
 
 .todolist .red.list-group-item {
-    background-color: hsl(0, 100%, 92%);
+	background-color: hsl(0, 100%, 92%);
 }
 .todolist .blue.list-group-item {
-    background-color: hsl(216, 100%, 96%);
+	background-color: hsl(216, 100%, 96%);
 }
 .todolist .green.list-group-item {
-    background-color: hsl(120, 100%, 96%);
+	background-color: hsl(120, 100%, 96%);
 }
 .todolist .yellow.list-group-item {
-    background-color: hsl(60, 100%, 92%);
+	background-color: hsl(60, 100%, 92%);
 }
 .todolist .pink.list-group-item {
-    background-color: hsl(0, 100%, 96%);
+	background-color: hsl(0, 100%, 96%);
 }
 .todolist .gold.list-group-item {
-    background-color: hsl(45, 100%, 90%);
+	background-color: hsl(45, 100%, 90%);
 }
 .todolist .silver.list-group-item {
-    background-color: hsl(0, 0%, 96%);
+	background-color: hsl(0, 0%, 96%);
 }
-.todolist .gray.list-group-item {
-    background-color: hsl(0, 0%, 90%);
+.todolist .grey.list-group-item {
+	background-color: hsl(0, 0%, 90%);
 }

@@ -6,10 +6,11 @@ $action = getArg('action');
 
 switch ($action) {
 	case 'create':
-		$name = getArg('name');
-		$password = getArg('password');
+		$name = getArg('createname');
+		$password = getArg('createpassword');
 		
 		$result = User::create($name, $password);
+
 		if ($result !== true)
 			fail($result);
 			
@@ -20,6 +21,7 @@ switch ($action) {
 		$password = getArg('password');
 		
 		$result = User::login($name, $password);
+
 		if ($result !== true)
 			fail($result);
 

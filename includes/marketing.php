@@ -1,11 +1,11 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>There's so much to do</h1>
+        <h1>There is so much to do</h1>
         <p>That&#39;s why we invented the to&#8209;do list. By leveraging the power of the cloud, functional reactive programming and deep neural networks, we&#39;ve created
             a technology with endless possibilities. Now you finally have a way to list the things you need to do!
         </p>
-        <p><a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/To-do_list#Task_list_organization" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/To-do_list#Task_list_organization" target="_blank" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 

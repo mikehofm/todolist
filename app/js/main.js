@@ -16,6 +16,13 @@ Handlebars.registerHelper('lowercase', function(text) {
 	return text.toLowerCase();
 });
 
+Handlebars.registerHelper('capitalize', function(text) {
+	if (typeof(text) !== 'string')
+		return text;
+		
+	return text[0].toUpperCase() + text.substr(1);
+});
+
 $(function () {
 
 	$('form[data-ajax]').submit(function (e) {

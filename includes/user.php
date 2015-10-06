@@ -52,5 +52,7 @@ class User {
 		
 		$id = R::store($user);
 		$_SESSION['user'] = R::load('user', $id);
+		
+		return true;
 	}
 }

@@ -76,16 +76,19 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Create your account</h4>
                 </div>
-                <form action="process-user.php" method="post" class="signup-form">
+                <form action="process-user.php" method="post" class="signup-form" autocomplete="off">
                     <input type="hidden" name="action" value="create" />
+					<!-- fake fields are a workaround for chrome autofill putting your login credentials into the signup form -->
+					<input class="hidden" type="text" name="fakeusernameremembered"/>
+					<input class="hidden" type="password" name="fakepasswordremembered"/>
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="signupEmail">Email address</label>
-                            <input type="text" name="name" placeholder="Email" class="form-control" id="signupEmail">
+                            <input type="text" name="createname" placeholder="Email" class="form-control" id="signupEmail" autocomplete="off" />
                         </div>
                         <div class="form-group">
                             <label for="signupPassword">Password</label>
-                            <input type="password" name="password" placeholder="Password" class="form-control" id="signupPassword">
+                            <input type="password" name="createpassword" placeholder="Password" class="form-control" id="signupPassword" autocomplete="off" />
                             <small>For maximum security, please use at least 4 digits, 3 symbols and 2 Klingon characters.</small>
                         </div>
                         <div class="alert alert-danger collapse" ></div>
